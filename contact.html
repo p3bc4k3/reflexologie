@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact &amp; Rendez-vous — Réflexologie Rodez · Mireille Delonca Fabre</title>
+  <meta name="description" content="Contactez Mireille Delonca Fabre, réflexologue à Rodez. Appelez le 06 89 04 07 44 pour prendre rendez-vous. Cabinet au 39 Avenue Tarayre, Rodez. Ouvert du lundi au samedi." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-name">Mireille Delonca Fabre</span>
+        <span class="logo-title">Réflexologue · Rodez</span>
+      </a>
+      <nav class="nav" role="navigation">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="reflexologie.html" class="nav-link">La Réflexologie</a>
+        <a href="mon-experience.html" class="nav-link">Mon expérience</a>
+        <a href="soins.html" class="nav-link">Mes soins</a>
+        <a href="tarifs.html" class="nav-link">Tarifs</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="tel:0689040744" class="nav-link nav-cta">
+          <i class="fa-solid fa-phone"></i> 06 89 04 07 44
+        </a>
+      </nav>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Contact &amp; RDV</span>
+      </div>
+      <span class="pretitle">Prenez rendez-vous</span>
+      <h1>Contactez-moi</h1>
+      <p>Pour toute question ou pour réserver une séance, appelez-moi directement ou envoyez-moi un message. Je vous répondrai dans les meilleurs délais.</p>
+    </div>
+  </section>
+
+  <!-- ===== PHONE CTA ===== -->
+  <section class="section" style="padding-bottom:0;">
+    <div class="container">
+      <div class="phone-cta" data-reveal>
+        <p>La façon la plus rapide de prendre rendez-vous</p>
+        <div class="phone-number">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:0689040744">06 89 04 07 44</a>
+        </div>
+        <p style="font-size:.88rem;color:rgba(255,255,255,.6);">
+          Disponible du lundi au samedi · Lundi 14h–19h · Mar–Ven 9h–19h · Samedi 9h–13h
+        </p>
+        <a href="tel:0689040744" class="btn btn-secondary btn-lg" style="margin-top:1rem;">
+          <i class="fa-solid fa-phone"></i> Appeler maintenant
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT GRID ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2" style="gap:3rem;align-items:start;">
+
+        <!-- Formulaire de contact -->
+        <div data-reveal>
+          <span class="pretitle">Message</span>
+          <h2 style="margin-bottom:1.5rem;">Envoyez-moi un message</h2>
+          <p style="color:var(--text-light);margin-bottom:2rem;">Vous avez une question ? Un doute sur la réflexologie ? Envoyez-moi votre message et je vous répondrai rapidement.</p>
+
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="firstName">Prénom *</label>
+                <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Votre prénom" required autocomplete="given-name" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="lastName">Nom *</label>
+                <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Votre nom" required autocomplete="family-name" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="phone">Téléphone</label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="Votre numéro (pour que je vous rappelle)" autocomplete="tel" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="sujet">Sujet</label>
+              <select id="sujet" name="sujet" class="form-select">
+                <option value="">Choisissez un sujet…</option>
+                <option value="rdv">Prendre rendez-vous</option>
+                <option value="info">Renseignements sur les soins</option>
+                <option value="tarifs">Informations tarifs</option>
+                <option value="cadeau">Chèque cadeau</option>
+                <option value="domicile">Séance à domicile</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Message *</label>
+              <textarea id="message" name="message" class="form-textarea" placeholder="Décrivez votre besoin, posez vos questions…" rows="5" required></textarea>
+            </div>
+            <p style="font-size:.82rem;color:var(--text-muted);">* Champs obligatoires. Vos données sont confidentielles et ne seront jamais partagées.</p>
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">
+              <i class="fa-solid fa-paper-plane"></i> Envoyer mon message
+            </button>
+          </form>
+        </div>
+
+        <!-- Infos pratiques -->
+        <div>
+          <!-- Cabinet principal -->
+          <div class="info-card" data-reveal style="margin-bottom:1.5rem;">
+            <div class="info-card-title">
+              <i class="fa-solid fa-location-dot" style="color:var(--secondary);margin-right:.5rem;"></i>
+              Cabinet principal — Rodez
+            </div>
+            <div class="info-card-sub">39 Avenue Tarayre, 12000 Rodez</div>
+
+            <div class="info-row">
+              <div class="info-row-icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <div class="info-row-label">Lundi</div>
+                <div class="info-row-value">14h00 – 19h00</div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-row-icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <div class="info-row-label">Mar – Ven</div>
+                <div class="info-row-value">9h00 – 19h00</div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-row-icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <div class="info-row-label">Samedi</div>
+                <div class="info-row-value">9h00 – 13h00</div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-row-icon"><i class="fa-solid fa-xmark" style="color:var(--text-muted);"></i></div>
+              <div>
+                <div class="info-row-label">Dimanche</div>
+                <div class="info-row-value hours-closed">Fermé</div>
+              </div>
+            </div>
+
+            <a
+              href="https://maps.google.com/?q=39+Avenue+Tarayre,+12000+Rodez"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-outline btn-sm"
+              style="margin-top:1.25rem;"
+            >
+              <i class="fa-solid fa-diamond-turn-right"></i> Obtenir l'itinéraire
+            </a>
+          </div>
+
+          <!-- Cabinet secondaire -->
+          <div class="info-card" data-reveal data-delay="100" style="margin-bottom:1.5rem;">
+            <div class="info-card-title">
+              <i class="fa-solid fa-map-pin" style="color:var(--secondary);margin-right:.5rem;"></i>
+              Cabinet secondaire — Bezonnes
+            </div>
+            <div class="info-card-sub">Le 3e mercredi de chaque mois</div>
+            <div class="info-row">
+              <div class="info-row-icon"><i class="fa-solid fa-building"></i></div>
+              <div>
+                <div class="info-row-label">Lieu</div>
+                <div class="info-row-value">Cabinet d'Ostéopathie Jacques Pons<br>Place de l'Église<br>12340 Bezonnes</div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-row-icon"><i class="fa-solid fa-calendar"></i></div>
+              <div>
+                <div class="info-row-label">Quand</div>
+                <div class="info-row-value">3e mercredi du mois<br><span style="font-size:.85rem;color:var(--text-muted);">Appelez pour les créneaux disponibles</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Domicile -->
+          <div class="info-card" data-reveal data-delay="200">
+            <div class="info-card-title">
+              <i class="fa-solid fa-house" style="color:var(--secondary);margin-right:.5rem;"></i>
+              Séances à domicile
+            </div>
+            <div class="info-card-sub">Je me déplace chez vous en Aveyron</div>
+            <div class="info-row">
+              <div class="info-row-icon"><i class="fa-solid fa-car"></i></div>
+              <div>
+                <div class="info-row-label">Zone</div>
+                <div class="info-row-value">Rodez et environs (Aveyron)</div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-row-icon"><i class="fa-solid fa-euro-sign"></i></div>
+              <div>
+                <div class="info-row-label">Tarif</div>
+                <div class="info-row-value">55€ par séance (déplacement inclus)</div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-row-icon"><i class="fa-solid fa-suitcase-medical"></i></div>
+              <div>
+                <div class="info-row-label">Équipement</div>
+                <div class="info-row-value">Table de soin, draps — tout le matériel est apporté</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CARTE ===== -->
+  <section class="section section-alt" style="padding-top:0;">
+    <div class="container">
+      <h2 class="text-center" style="margin-bottom:1.5rem;" data-reveal>Trouvez le cabinet</h2>
+      <div data-reveal>
+        <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);">
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=2.5657%2C44.3468%2C2.5957%2C44.3668&layer=mapnik&marker=44.3568557%2C2.5807426"
+            width="100%"
+            height="400"
+            style="border:0;display:block;"
+            allowfullscreen=""
+            loading="lazy"
+            title="39 Avenue Tarayre, 12000 Rodez — Cabinet de réflexologie"
+          ></iframe>
+        </div>
+        <div style="text-align:center;margin-top:1rem;">
+          <a
+            href="https://maps.google.com/?q=39+Avenue+Tarayre,+12000+Rodez"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline"
+          >
+            <i class="fa-solid fa-diamond-turn-right"></i> Ouvrir dans Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ RAPIDE ===== -->
+  <section class="section">
+    <div class="container" style="max-width:760px;">
+      <div class="section-header" data-reveal>
+        <span class="pretitle">Avant votre appel</span>
+        <h2>Questions fréquentes</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item" data-reveal>
+          <button class="faq-question">
+            Comment prendre rendez-vous ?
+            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              La prise de rendez-vous se fait <strong>par téléphone</strong> au <a href="tel:0689040744" style="color:var(--primary);font-weight:700;">06 89 04 07 44</a>. Vous pouvez aussi m'envoyer un message via le formulaire ci-dessus et je vous rappellerai. Je vous proposerai des créneaux adaptés à vos disponibilités.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item" data-reveal>
+          <button class="faq-question">
+            Quel délai pour obtenir un rendez-vous ?
+            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              En général, je peux vous proposer un rendez-vous dans la semaine. Les créneaux du matin (dès 9h) sont souvent disponibles rapidement. N'hésitez pas à appeler même en dernière minute — il y a parfois des annulations.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item" data-reveal>
+          <button class="faq-question">
+            Comment annuler ou reporter ?
+            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Appelez-moi dès que possible au <a href="tel:0689040744" style="color:var(--primary);font-weight:700;">06 89 04 07 44</a>. Les annulations effectuées au moins 48h à l'avance sont sans frais. En cas d'annulation tardive (moins de 24h), un défraiement peut être demandé.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item" data-reveal>
+          <button class="faq-question">
+            Acceptez-vous les cartes bancaires ?
+            <i class="fa-solid fa-chevron-down faq-chevron"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Non, le règlement s'effectue uniquement par <strong>espèces</strong> ou <strong>chèque</strong> (à l'ordre de Mireille Delonca Fabre), à la fin de chaque séance. Les cartes bancaires et virements ne sont pas acceptés.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2 data-reveal>Un doute ? Une question ? Appelez !</h2>
+      <p data-reveal>Je suis là pour répondre à toutes vos questions et vous aider à choisir le soin qui vous convient le mieux.</p>
+      <div class="cta-banner-actions" data-reveal>
+        <a href="tel:0689040744" class="btn btn-secondary btn-lg">
+          <i class="fa-solid fa-phone"></i> 06 89 04 07 44
+        </a>
+        <a href="soins.html" class="btn btn-white btn-lg">
+          Découvrir les soins <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-name">Mireille Delonca Fabre</span>
+            <span class="logo-title">Réflexologue · Rodez, Aveyron</span>
+          </div>
+          <p>Des soins de réflexologie plantaire et palmaire dans un cadre bienveillant, pour retrouver équilibre et bien-être naturellement.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="reflexologie.html">La Réflexologie</a></li>
+            <li><a href="mon-experience.html">Mon expérience</a></li>
+            <li><a href="soins.html">Mes soins</a></li>
+            <li><a href="tarifs.html">Tarifs</a></li>
+            <li><a href="contact.html">Contact &amp; RDV</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Horaires</h4>
+          <ul class="footer-links">
+            <li>Lundi : 14h – 19h</li>
+            <li>Mardi – Vendredi : 9h – 19h</li>
+            <li>Samedi : 9h – 13h</li>
+            <li>Dimanche : Fermé</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div><a href="tel:0689040744">06 89 04 07 44</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>39 Avenue Tarayre<br>12000 Rodez</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-map-pin"></i>
+            <div>Bezonnes : 3e mercredi du mois<br>Cabinet d'ostéopathie J. Pons</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Mireille Delonca Fabre — Réflexologue à Rodez</span>
+        <span>Site réalisé avec soin · Aveyron, France</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating CTA (mobile) -->
+  <a href="tel:0689040744" class="floating-cta" aria-label="Appeler pour réserver">
+    <i class="fa-solid fa-phone"></i>
+    <span>Réserver une séance</span>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

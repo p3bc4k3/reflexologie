@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarifs — Réflexologie Rodez · Mireille Delonca Fabre</title>
+  <meta name="description" content="Tarifs des séances de réflexologie à Rodez : 50€ en cabinet, 55€ à domicile, 45€/séance en suivi mensuel. Règlement espèces ou chèque. Chèques cadeaux disponibles." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .tarif-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .tarif-table thead {
+      background: var(--primary);
+      color: var(--white);
+    }
+    .tarif-table th {
+      padding: 1.1rem 1.5rem;
+      text-align: left;
+      font-size: .85rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .tarif-table td {
+      padding: 1.1rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      font-size: .95rem;
+    }
+    .tarif-table tr:last-child td { border-bottom: none; }
+    .tarif-table tbody tr:hover { background: var(--bg-alt); }
+    .tarif-price {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--primary);
+      white-space: nowrap;
+    }
+    .tarif-highlight td { background: rgba(61,107,79,.05); }
+    .tarif-highlight .tarif-price { color: var(--primary-dark); }
+
+    .prep-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      transition: box-shadow .2s;
+    }
+    .prep-card:hover { box-shadow: var(--shadow-sm); }
+    .prep-icon {
+      width: 48px; height: 48px;
+      border-radius: var(--radius-sm);
+      background: var(--accent-light);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .prep-card h4 { margin-bottom: .3rem; font-size: 1rem; }
+    .prep-card p { margin: 0; font-size: .9rem; color: var(--text-light); }
+
+    /* Mobile table scroll */
+    .table-wrap { overflow-x: auto; border-radius: var(--radius-lg); }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-name">Mireille Delonca Fabre</span>
+        <span class="logo-title">Réflexologue · Rodez</span>
+      </a>
+      <nav class="nav" role="navigation">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="reflexologie.html" class="nav-link">La Réflexologie</a>
+        <a href="mon-experience.html" class="nav-link">Mon expérience</a>
+        <a href="soins.html" class="nav-link">Mes soins</a>
+        <a href="tarifs.html" class="nav-link active">Tarifs</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="tel:0689040744" class="nav-link nav-cta">
+          <i class="fa-solid fa-phone"></i> 06 89 04 07 44
+        </a>
+      </nav>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Tarifs</span>
+      </div>
+      <span class="pretitle">Tarifs &amp; informations pratiques</span>
+      <h1>Des tarifs clairs et transparents</h1>
+      <p>Pas de mauvaise surprise. Voici tout ce que vous devez savoir avant votre séance.</p>
+    </div>
+  </section>
+
+  <!-- ===== TARIFS CARTES ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="pretitle">Grille tarifaire</span>
+        <h2>Choisissez votre formule</h2>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Cabinet -->
+        <div class="pricing-card" data-reveal data-delay="0">
+          <div class="pricing-icon">🏡</div>
+          <div class="pricing-title">Séance en cabinet</div>
+          <div class="pricing-desc">39 av. Tarayre, Rodez</div>
+          <div class="pricing-price">
+            <div class="pricing-amount"><span class="pricing-currency">€</span>50</div>
+            <div class="pricing-period">par séance d'environ 1 heure</div>
+          </div>
+          <ul class="pricing-features">
+            <li class="pricing-feature"><i class="fa-solid fa-check"></i> Réflexologie plantaire ou palmaire</li>
+            <li class="pricing-feature"><i class="fa-solid fa-check"></i> Entretien inclus en début de séance</li>
+            <li class="pricing-feature"><i class="fa-solid fa-check"></i> Conseils personnalisés en fin de soin</li>
+            <li class="pricing-feature"><i class="fa-solid fa-check"></i> Adapté femmes enceintes &amp; enfants</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline" style="width:100%;justify-content:center;">
+            <i class="fa-solid fa-calendar-plus"></i> Prendre RDV
+          </a>
+        </div>
+
+        <!-- Mensuel -->
+        <div class="pricing-card featured" data-reveal data-delay="100">
+          <div class="pricing-badge">⭐ Recommandé</div>
+          <div class="pricing-icon">📅</div>
+          <div class="pricing-title">Suivi mensuel</div>
+          <div class="pricing-desc">Une séance par mois, en continu</div>
+          <div class="pricing-price">
+            <div class="pricing-amount"><span class="pricing-currency">€</span>45</div>
+            <div class="pricing-period">par séance (engagement mensuel)</div>
+          </div>
+          <ul class="pricing-features">
+            <li class="pricing-feature"><i class="fa-solid fa-check"></i> Économisez 5€ par séance</li>
+            <li class="pricing-feature"><i class="fa-solid fa-check"></i> Suivi personnalisé et continu</li>
+            <li class="pricing-feature"><i class="fa-solid fa-check"></i> Effets cumulatifs et durables</li>
+            <li class="pricing-feature"><i class="fa-solid fa-check"></i> Priorité pour les créneaux</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">
+            <i class="fa-solid fa-calendar-check"></i> Démarrer le suivi
+          </a>
+        </div>
+
+        <!-- Domicile -->
+        <div class="pricing-card" data-reveal data-delay="200">
+          <div class="pricing-icon">🚗</div>
+          <div class="pricing-title">À domicile</div>
+          <div class="pricing-desc">Je me déplace chez vous</div>
+          <div class="pricing-price">
+            <div class="pricing-amount"><span class="pricing-currency">€</span>55</div>
+            <div class="pricing-period">par séance (déplacement inclus)</div>
+          </div>
+          <ul class="pricing-features">
+            <li class="pricing-feature"><i class="fa-solid fa-check"></i> Tout le matériel apporté</li>
+            <li class="pricing-feature"><i class="fa-solid fa-check"></i> Confort de votre domicile</li>
+            <li class="pricing-feature"><i class="fa-solid fa-check"></i> Idéal personnes à mobilité réduite</li>
+            <li class="pricing-feature"><i class="fa-solid fa-check"></i> Secteur Rodez &amp; environs</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline" style="width:100%;justify-content:center;">
+            <i class="fa-solid fa-calendar-plus"></i> Prendre RDV
+          </a>
+        </div>
+      </div>
+
+      <!-- Chèque cadeau -->
+      <div class="card mt-3" style="display:flex;align-items:center;gap:2rem;flex-wrap:wrap;" data-reveal>
+        <div style="font-size:3.5rem;flex-shrink:0;">🎁</div>
+        <div style="flex:1;min-width:200px;">
+          <h3 style="margin-bottom:.5rem;">Chèques cadeaux disponibles</h3>
+          <p style="margin:0;color:var(--text-light);">Offrez une séance de réflexologie à un proche. Chèques cadeaux disponibles sur demande au tarif de <strong>50€</strong>. Valables 1 an. Parfait pour les anniversaires, fêtes des mères, Noël…</p>
+        </div>
+        <a href="tel:0689040744" class="btn btn-secondary" style="flex-shrink:0;">
+          <i class="fa-solid fa-phone"></i> Commander
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TABLEAU RÉCAP ===== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="pretitle">Récapitulatif</span>
+        <h2>Tous les tarifs en un coup d'œil</h2>
+      </div>
+      <div class="table-wrap" data-reveal>
+        <table class="tarif-table">
+          <thead>
+            <tr>
+              <th>Type de soin</th>
+              <th>Durée</th>
+              <th>Lieu</th>
+              <th>Tarif</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <strong>Réflexologie plantaire</strong><br>
+                <span style="font-size:.82rem;color:var(--text-muted);">Soin sur les pieds</span>
+              </td>
+              <td>~1 heure</td>
+              <td>Cabinet (Rodez)</td>
+              <td class="tarif-price">50 €</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Réflexologie palmaire</strong><br>
+                <span style="font-size:.82rem;color:var(--text-muted);">Soin sur les mains</span>
+              </td>
+              <td>~1 heure</td>
+              <td>Cabinet (Rodez)</td>
+              <td class="tarif-price">50 €</td>
+            </tr>
+            <tr class="tarif-highlight">
+              <td>
+                <strong>Suivi mensuel</strong><br>
+                <span style="font-size:.82rem;color:var(--text-muted);">Engagement d'une séance/mois</span>
+              </td>
+              <td>~1 heure</td>
+              <td>Cabinet (Rodez)</td>
+              <td class="tarif-price">45 € <span style="font-size:.75rem;color:var(--primary-light);font-family:var(--font-body);font-weight:400;">/séance</span></td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Séance à domicile</strong><br>
+                <span style="font-size:.82rem;color:var(--text-muted);">Déplacement en Aveyron</span>
+              </td>
+              <td>~1 heure</td>
+              <td>Votre domicile</td>
+              <td class="tarif-price">55 €</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Enfants</strong><br>
+                <span style="font-size:.82rem;color:var(--text-muted);">Durée réduite selon l'âge</span>
+              </td>
+              <td>30–45 min</td>
+              <td>Cabinet ou domicile</td>
+              <td class="tarif-price">Sur devis</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Chèque cadeau</strong><br>
+                <span style="font-size:.82rem;color:var(--text-muted);">1 séance en cabinet d'1h</span>
+              </td>
+              <td>—</td>
+              <td>Cabinet (Rodez)</td>
+              <td class="tarif-price">50 €</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PAIEMENT ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2" style="gap:3rem;align-items:start;">
+        <div data-reveal>
+          <span class="pretitle">Paiement</span>
+          <h2 style="margin-bottom:1.5rem;">Modalités de règlement</h2>
+          <div style="display:flex;flex-direction:column;gap:1rem;">
+            <div class="prep-card">
+              <div class="prep-icon">💳</div>
+              <div>
+                <h4>Espèces</h4>
+                <p>Règlement en liquide accepté, en euros.</p>
+              </div>
+            </div>
+            <div class="prep-card">
+              <div class="prep-icon">📝</div>
+              <div>
+                <h4>Chèque</h4>
+                <p>Chèques acceptés à l'ordre de Mireille Delonca Fabre.</p>
+              </div>
+            </div>
+          </div>
+          <div class="tip-box mt-2">
+            <div class="tip-box-icon">ℹ️</div>
+            <div><p>Le règlement s'effectue <strong>à la fin de chaque séance</strong>. Les cartes bancaires et virements ne sont pas acceptés pour le moment.</p></div>
+          </div>
+        </div>
+
+        <div data-reveal data-delay="100">
+          <span class="pretitle">Annulation</span>
+          <h2 style="margin-bottom:1.5rem;">Politique d'annulation</h2>
+          <div style="display:flex;flex-direction:column;gap:1rem;">
+            <div class="prep-card">
+              <div class="prep-icon">✅</div>
+              <div>
+                <h4>Annulation gratuite</h4>
+                <p>Toute annulation effectuée <strong>48h avant</strong> la séance est sans frais.</p>
+              </div>
+            </div>
+            <div class="prep-card">
+              <div class="prep-icon">⏰</div>
+              <div>
+                <h4>Annulation tardive</h4>
+                <p>En cas d'annulation moins de 24h avant la séance, un défraiement peut être demandé. Merci de prévenir dès que possible.</p>
+              </div>
+            </div>
+            <div class="prep-card">
+              <div class="prep-icon">📞</div>
+              <div>
+                <h4>Comment annuler ?</h4>
+                <p>Par téléphone au <a href="tel:0689040744" style="color:var(--primary);font-weight:700;">06 89 04 07 44</a>, le plus tôt possible.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRÉPARER SA SÉANCE ===== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="pretitle">Avant votre venue</span>
+        <h2>Comment préparer votre séance ?</h2>
+        <p>Quelques conseils simples pour profiter pleinement de votre soin.</p>
+      </div>
+      <div class="grid-2" style="gap:1.25rem;">
+        <div class="prep-card" data-reveal data-delay="0">
+          <div class="prep-icon">🧦</div>
+          <div>
+            <h4>Pas besoin de tenue spéciale</h4>
+            <p>Vous gardez vos vêtements. Je travaille uniquement sur vos pieds nus (ou vos mains). Pas de cabine de déshabillage nécessaire.</p>
+          </div>
+        </div>
+        <div class="prep-card" data-reveal data-delay="50">
+          <div class="prep-icon">🚿</div>
+          <div>
+            <h4>Pieds propres</h4>
+            <p>Veillez à avoir les pieds propres avant la séance. Pas de contrainte particulière — les pieds sont nettoyés avant le soin.</p>
+          </div>
+        </div>
+        <div class="prep-card" data-reveal data-delay="100">
+          <div class="prep-icon">🍽️</div>
+          <div>
+            <h4>Évitez les repas copieux</h4>
+            <p>Il est conseillé de ne pas manger un repas lourd dans l'heure précédant la séance pour être pleinement à l'aise.</p>
+          </div>
+        </div>
+        <div class="prep-card" data-reveal data-delay="150">
+          <div class="prep-icon">📋</div>
+          <div>
+            <h4>Partagez vos informations de santé</h4>
+            <p>Mentionnez vos traitements médicaux en cours, grossesse, allergies ou pathologies lors de l'entretien initial.</p>
+          </div>
+        </div>
+        <div class="prep-card" data-reveal data-delay="200">
+          <div class="prep-icon">💧</div>
+          <div>
+            <h4>Hydratez-vous après</h4>
+            <p>Buvez beaucoup d'eau après la séance pour faciliter l'élimination des toxines libérées par le soin.</p>
+          </div>
+        </div>
+        <div class="prep-card" data-reveal data-delay="250">
+          <div class="prep-icon">😴</div>
+          <div>
+            <h4>Prévoyez du temps de repos</h4>
+            <p>Si possible, ne planifiez pas d'activité intense juste après. Un soin relaxant mérite un après calme pour en profiter pleinement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MUTUELLE ===== -->
+  <section class="section">
+    <div class="container" style="max-width:760px;">
+      <div class="section-header" data-reveal>
+        <span class="pretitle">Remboursement</span>
+        <h2>Et ma mutuelle ?</h2>
+      </div>
+      <div data-reveal>
+        <p style="color:var(--text-light);font-size:1.05rem;text-align:center;margin-bottom:2rem;">La réflexologie n'est pas remboursée par la Sécurité Sociale. Cependant, <strong>certaines mutuelles</strong> prennent en charge partiellement les séances de médecines douces (ostéopathie, réflexologie, acupuncture…).</p>
+        <div class="grid-2" style="gap:1.25rem;">
+          <div class="highlight-box">
+            <p><strong>Renseignez-vous</strong> auprès de votre mutuelle pour savoir si votre contrat prend en charge les médecines douces et quel montant est remboursé.</p>
+          </div>
+          <div class="highlight-box">
+            <p>Je peux vous fournir une <strong>facture ou reçu</strong> à la fin de chaque séance pour vos démarches de remboursement auprès de votre mutuelle.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Prête à prendre soin de vous ?</h2>
+      <p>Appelez-moi pour réserver votre séance ou pour toute question sur les tarifs et disponibilités.</p>
+      <div class="cta-banner-actions">
+        <a href="tel:0689040744" class="btn btn-secondary btn-lg">
+          <i class="fa-solid fa-phone"></i> 06 89 04 07 44
+        </a>
+        <a href="contact.html" class="btn btn-white btn-lg">
+          <i class="fa-regular fa-envelope"></i> Envoyer un message
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-name">Mireille Delonca Fabre</span>
+            <span class="logo-title">Réflexologue · Rodez, Aveyron</span>
+          </div>
+          <p>Des soins de réflexologie plantaire et palmaire dans un cadre bienveillant, pour retrouver équilibre et bien-être naturellement.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="reflexologie.html">La Réflexologie</a></li>
+            <li><a href="mon-experience.html">Mon expérience</a></li>
+            <li><a href="soins.html">Mes soins</a></li>
+            <li><a href="tarifs.html">Tarifs</a></li>
+            <li><a href="contact.html">Contact &amp; RDV</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Horaires</h4>
+          <ul class="footer-links">
+            <li>Lundi : 14h – 19h</li>
+            <li>Mardi – Vendredi : 9h – 19h</li>
+            <li>Samedi : 9h – 13h</li>
+            <li>Dimanche : Fermé</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div><a href="tel:0689040744">06 89 04 07 44</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>39 Avenue Tarayre<br>12000 Rodez</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Mireille Delonca Fabre — Réflexologue à Rodez</span>
+        <span>Site réalisé avec soin · Aveyron, France</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating CTA (mobile) -->
+  <a href="tel:0689040744" class="floating-cta" aria-label="Appeler pour réserver">
+    <i class="fa-solid fa-phone"></i>
+    <span>Réserver une séance</span>
+  </a>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
