@@ -125,6 +125,30 @@ document.addEventListener('DOMContentLoaded', () => {
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
+
+      const firstName = contactForm.querySelector('#firstName').value.trim();
+      const lastName  = contactForm.querySelector('#lastName').value.trim();
+      const phone     = contactForm.querySelector('#phone').value.trim();
+      const sujetEl   = contactForm.querySelector('#sujet');
+      const sujetText = sujetEl.options[sujetEl.selectedIndex].text;
+      const message   = contactForm.querySelector('#message').value.trim();
+
+      const defaultSubjet = 'Choisissez un sujet…';
+      const emailSubject  = `Contact site web — ${sujetText !== defaultSubjet ? sujetText : 'Message'}`;
+      const emailBody     =
+        `Bonjour Mireille,\n\n` +
+        `Vous avez reçu un message depuis votre site web.\n\n` +
+        `Nom : ${firstName} ${lastName}\n` +
+        `Téléphone : ${phone || 'Non renseigné'}\n` +
+        `Sujet : ${sujetText !== defaultSubjet ? sujetText : 'Non précisé'}\n\n` +
+        `Message :\n${message}\n\n` +
+        `---\nEnvoyé depuis le formulaire de contact du site web.`;
+
+      window.location.href =
+        `mailto:mireille.delonca12@orange.fr` +
+        `?subject=${encodeURIComponent(emailSubject)}` +
+        `&body=${encodeURIComponent(emailBody)}`;
+
       const btn = contactForm.querySelector('[type="submit"]');
       const original = btn.innerHTML;
       btn.innerHTML = '<i class="fa-solid fa-check"></i> Message envoyé !';
