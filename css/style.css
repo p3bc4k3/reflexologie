@@ -294,18 +294,28 @@ p:last-child { margin-bottom: 0; }
   display: inline-flex;
   align-items: center;
   gap: .5rem;
-  font-size: .82rem;
+
+  /* Responsive */
+  font-size: clamp(0.95rem, 1.4vw, 1.25rem);
+  line-height: 1.2;
+
   font-weight: 700;
   letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--secondary-light);
   margin-bottom: 1.5rem;
 }
+
 .hero-pretitle::before {
   content: '';
   display: inline-block;
-  width: 32px; height: 2px;
+
+  /* Trait proportionné + responsive */
+  width: clamp(28px, 3.2vw, 48px);
+  height: clamp(2px, 0.2vw, 3px);
+
   background: var(--secondary-light);
+  border-radius: 999px;
 }
 .hero h1 {
   color: var(--white);
